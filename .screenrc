@@ -1,0 +1,18 @@
+escape ^aa
+defutf8 on
+caption always
+#caption string '%{ffffff000000}%w'
+defmonitor on
+defscrollback 10000
+startup_message off
+
+
+##startup 
+##name                                   numb    command
+#screen -t "root"                0               sudo -s 
+#screen -t "irssi"               1               zsh -c 'irssi -n "$(grep -o -m 2 -a "[a-zA-Z0-9]\{5\}" /dev/urandom | tr -d "\n" | strings | sed -e "s:^[0-9]\+::" -e "s:^\(\w\{11\}\).*:\1:")"'
+#screen -t "mcabber"             2               mcabber
+#screen -t "zsh"                 3
+#screen -t "zsh"                 4
+#screen -t "zsh"                 5
+#
