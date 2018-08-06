@@ -11,9 +11,17 @@ stty -ixon
 export HISTCONTROL=ignoredups:erasedups
 export HISTTIMEFORMAT="%d/%m/%y %T "
 export HISTSIZE=10000
-export EDITOR=vim
-export VISUAL=vim
 export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
+
+if command -v nvim >/dev/null;
+then
+    export EDITOR=nvim
+    export VISUAL=nvim
+    alias vimdiff='nvim -d'
+else
+    export EDITOR=vim
+    export VISUAL=vim
+fi
 
 if [ `id -u` -eq 0 ]
 then
