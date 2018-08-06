@@ -53,12 +53,17 @@ autocmd BufNewFile,BufRead *.rb set tabstop=2 shiftwidth=2 textwidth=79 softtabs
 autocmd BufNewFile,BufRead *.py set tabstop=4 shiftwidth=4 textwidth=79 softtabstop=4 expandtab autoindent fileformat=unix formatprg=autopep8\ -
 autocmd FileType gitcommit setlocal spell spelllang=en
 
+" SESSIONS {{{
+autocmd VimLeave * nested if !argc() | mksession! Session.vim | endif
+autocmd VimEnter * nested if !argc() | if filereadable('Session.vim') | source Session.vim | endif | endif
+command! SE mks! Session.vim
+" }}}
+
 set path+=**
 
 command! TA !ctags -R .
 command! VR !vagrant rsync
 command! VS !vagrant ssh
-command! SE mks! Session.vim
 
 augroup myvimrc
     au!

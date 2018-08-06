@@ -23,6 +23,10 @@ else
     export VISUAL=vim
 fi
 
+vim() {
+    command $EDITOR $@
+}
+
 if [ `id -u` -eq 0 ]
 then
         export PS1='[\u@\h \W]\# '
