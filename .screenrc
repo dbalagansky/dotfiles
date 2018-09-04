@@ -1,8 +1,11 @@
-escape ^aa
+escape ^bb
 defutf8 on
-caption always
+#caption always
 #caption string '%{ffffff000000}%w'
+#caption always "%{= Kw}%n %t"
+hardstatus alwayslastline "%{= gk}%`%-w%{= gk}%n %t%{-}%+w %= \"%H\" %02c %d-%M-%y"
 defmonitor on
+term xterm-256color
 defscrollback 10000
 startup_message off
 
