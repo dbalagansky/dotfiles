@@ -24,10 +24,13 @@ syntax on
 " Set colorscheme
 set bg=dark
 colorscheme ron
+
+" VIMDIFF COLORS FIX {{{
 highlight DiffAdd term=reverse cterm=bold ctermbg=green ctermfg=black
 highlight DiffChange term=reverse cterm=bold ctermbg=cyan ctermfg=black
 highlight DiffText term=reverse cterm=bold ctermbg=gray ctermfg=black
 highlight DiffDelete term=reverse cterm=bold ctermbg=red ctermfg=black
+" }}}
 
 " FOLDING {{{
 set foldmethod=indent
@@ -67,15 +70,17 @@ command! TA !ctags -R .
 command! VR !vagrant rsync
 command! VS !vagrant ssh
 
+" VIMRC HANDLING {{{
 augroup myvimrc
     au!
     au BufWritePost .vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc so $MYVIMRC | if has('gui_running') | so $MYGVIMRC | endif
 augroup END
+" }}}
 
 set listchars=tab:>>,trail:.,nbsp:~
 set list
 
-" default file browser configuration
+" NETRW (FILE EXPLORER) {{{
 let g:netrw_liststyle = 3
 let g:netrw_banner = 0
 let g:netrw_browse_split = 4
@@ -84,6 +89,7 @@ autocmd FileType netrw hi CursorLine term=underline
 autocmd FileType netrw au BufEnter <buffer> hi CursorLine term=underline
 autocmd FileType netrw au BufLeave <buffer> hi clear CursorLine
 autocmd FileType netrw setlocal winfixwidth
+" }}}
 
 autocmd WinEnter,BufRead * setlocal nocursorline
 
