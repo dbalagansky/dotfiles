@@ -54,7 +54,7 @@ call matchadd('ColorColumn', '\%81v', 100)
 autocmd BufNewFile,BufRead SCons* setf scons
 autocmd BufNewFile,BufRead *.sql set filetype=mysql
 autocmd BufNewFile,BufRead *.rb set tabstop=2 shiftwidth=2 textwidth=79 softtabstop=2 expandtab autoindent fileformat=unix
-autocmd BufNewFile,BufRead *.py set tabstop=4 shiftwidth=4 textwidth=79 softtabstop=4 expandtab autoindent fileformat=unix formatprg=autopep8\ -
+autocmd BufNewFile,BufRead *.py set tabstop=4 shiftwidth=4 textwidth=79 softtabstop=4 expandtab autoindent fileformat=unix formatprg=yapf
 autocmd FileType gitcommit setlocal spell spelllang=en
 autocmd FileType vim setlocal tabstop=2 shiftwidth=2 textwidth=79 softtabstop=2 expandtab autoindent fileformat=unix foldmethod=marker foldmarker=\ {{{,\ }}}
 
