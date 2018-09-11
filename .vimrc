@@ -112,7 +112,9 @@ set lazyredraw
 " Allow backspacing over autoindent, eol and start of the insert
 set backspace=2
 " Keymap
-set keymap=russian-jcukenwin
+if filereadable($VIMRUNTIME . '/keymap/russian-jcukenwin.vim')
+  set keymap=russian-jcukenwin
+endif
 " EN is default in insert mode
 set iminsert=0
 " EN is default in search
