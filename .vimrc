@@ -29,9 +29,10 @@ highlight DiffChange term=reverse cterm=bold ctermbg=cyan ctermfg=black
 highlight DiffText term=reverse cterm=bold ctermbg=gray ctermfg=black
 highlight DiffDelete term=reverse cterm=bold ctermbg=red ctermfg=black
 
-" Enable folding
+" FOLDING {{{
 set foldmethod=indent
 set foldlevel=99
+" }}}
 
 set expandtab
 set clipboard=unnamed
@@ -52,6 +53,7 @@ autocmd BufNewFile,BufRead *.sql set filetype=mysql
 autocmd BufNewFile,BufRead *.rb set tabstop=2 shiftwidth=2 textwidth=79 softtabstop=2 expandtab autoindent fileformat=unix
 autocmd BufNewFile,BufRead *.py set tabstop=4 shiftwidth=4 textwidth=79 softtabstop=4 expandtab autoindent fileformat=unix formatprg=autopep8\ -
 autocmd FileType gitcommit setlocal spell spelllang=en
+autocmd FileType vim setlocal tabstop=2 shiftwidth=2 textwidth=79 softtabstop=2 expandtab autoindent fileformat=unix foldmethod=marker foldmarker=\ {{{,\ }}}
 
 " SESSIONS {{{
 autocmd VimLeave * nested if !argc() | mksession! Session.vim | endif
