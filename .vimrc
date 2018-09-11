@@ -175,6 +175,8 @@ set hidden
 " Show completions in statusline
 set wildmenu
 
+set mouse=
+
 " KEY BINDINGS
 vmap y y`]
 "let mapleader=","
