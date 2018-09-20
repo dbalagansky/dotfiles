@@ -227,6 +227,8 @@ cnoremap <ESC>p <Up>
 cnoremap <ESC>n <Down>
 nnoremap / :setlocal hlsearch<CR>/
 
+let mapleader=","
+nmap <leader>rc :tabedit ~/.vimrc<CR>
 "nmap <leader>s :setlocal hlsearch! <CR>
 "map <S-Enter> O<ESC>
 "map <Enter> o<ESC>
