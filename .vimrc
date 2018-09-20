@@ -6,9 +6,50 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
+Plugin 'w0rp/ale'
+let g:ale_lint_on_text_changed = 'never'
+let g:ale_lint_on_enter = 0
+let g:ale_fixers = {
+      \   'python': ['yapf', 'isort'],
+      \}
+let g:ale_linters = {
+      \   'python': [],
+      \}
+"let g:ale_python_yapf_executable = $HOME . '/.virtualenvs/neovim3/bin/yapf'
+"let g:ale_python_isort_executable = $HOME . '/.virtualenvs/neovim3/bin/isort'
+let g:ale_fix_on_save = 1
+let g:ale_lint_on_save = 0
+let g:ale_enabled = 1
+
+"Plugin 'python-mode/python-mode'
+"let g:pymode_python = 'python3'
+"let g:pymode_options_colorcolumn = 0
+"let g:pymode_lint_unmodified = 1
+"let g:pymode_rope_completion = 1
+"let g:pymode_rope_complete_on_dot = 1
+"let g:pymode_rope_completion_bind = '<C-f>'
+
+"Plugin 'davidhalter/jedi-vim'
+"let g:jedi#completions_command = "<leader>c"
+"autocmd FileType python setlocal completeopt-=preview
+"let g:jedi#auto_initialization = 0
+
+"Plugin 'Shougo/deoplete.nvim'
+"let g:deoplete#enable_at_startup = 1
+"Plugin 'zchee/deoplete-jedi'
+
+"Plugin 'maralla/completor.vim'
+"let g:completor_python_binary = $HOME . '/.virtualenvs/neovim3/bin/python'
+
+Plugin 'ludovicchabant/vim-gutentags'
+
 "Plugin 'scrooloose/nerdcommenter'
 "Plugin 'scrooloose/nerdtree'
+
 "Plugin 'twerth/ir_black'
+"Plugin 'chriskempson/base16-vim'
+"Plugin 'kaicataldo/material.vim'
+"Plugin 'jdkanani/vim-material-theme'
 
 call vundle#end()
 
