@@ -223,7 +223,8 @@ set mouse=
 
 " KEY BINDINGS
 vmap y y`]
-"let mapleader=","
+cnoremap <ESC>p <Up>
+cnoremap <ESC>n <Down>
 nnoremap / :setlocal hlsearch<CR>/
 
 "nmap <leader>s :setlocal hlsearch! <CR>
