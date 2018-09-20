@@ -12,6 +12,12 @@ Plugin 'gmarik/Vundle.vim'
 
 call vundle#end()
 
+if has('nvim')
+  "set termguicolors
+  let g:python3_host_prog = $HOME . '/.virtualenvs/neovim3/bin/python'
+  "let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+endif
+
 " Turn on filetype detection, indent, and load ftplugins
 filetype indent plugin on
 syntax on
