@@ -138,6 +138,8 @@ autocmd FileType netrw setlocal winfixwidth
 
 autocmd WinEnter,BufRead * setlocal nocursorline
 
+autocmd QuickFixCmdPost *grep* cwindow
+
 " Do not beep or flash screen
 set visualbell t_vb=
 " Allow to move cursor one character towards the end of line
@@ -218,6 +220,7 @@ set hidden
 "set wildmode=""
 " Show completions in statusline
 set wildmenu
+set wildignore+=Session.vim,tags
 
 set mouse=
 
