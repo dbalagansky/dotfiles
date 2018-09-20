@@ -129,6 +129,7 @@ set ignorecase
 set smartcase
 " Do not wrap searches
 set nowrapscan
+set hlsearch
 
 " SCROLLING
 " Number of lines to scroll
@@ -180,6 +181,9 @@ set mouse=
 " KEY BINDINGS
 vmap y y`]
 "let mapleader=","
+nnoremap / :setlocal hlsearch<CR>/
+
+"nmap <leader>s :setlocal hlsearch! <CR>
 "map <S-Enter> O<ESC>
 "map <Enter> o<ESC>
 "noremap <silent> ,bd :bd<CR>
