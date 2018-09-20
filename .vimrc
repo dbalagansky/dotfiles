@@ -140,6 +140,8 @@ autocmd WinEnter,BufRead * setlocal nocursorline
 
 autocmd QuickFixCmdPost *grep* cwindow
 
+set directory=$HOME/.vim/swapfiles//
+
 " Do not beep or flash screen
 set visualbell t_vb=
 " Allow to move cursor one character towards the end of line
