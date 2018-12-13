@@ -63,8 +63,21 @@ endif
 filetype indent plugin on
 syntax on
 " Set colorscheme
+set t_Co=16
 set bg=dark
-colorscheme ron
+colorscheme default
+
+" COLOUR FIXES BASED OFF NOCTU AND VIM-DIM
+highlight LineNr ctermfg=0 ctermbg=NONE
+highlight Comment ctermfg=8
+highlight Constant ctermfg=13
+highlight Special ctermfg=9
+highlight Visual ctermfg=NONE ctermbg=NONE cterm=inverse
+highlight IncSearch ctermfg=0 ctermbg=3 cterm=NONE
+highlight Search ctermfg=0 ctermbg=3
+highlight Pmenu ctermfg=7 ctermbg=0
+highlight PmenuSel ctermfg=NONE ctermbg=NONE cterm=inverse
+highlight MatchParen ctermfg=NONE ctermbg=NONE cterm=inverse
 
 " VIMDIFF COLORS FIX {{{
 highlight DiffAdd term=reverse cterm=bold ctermbg=green ctermfg=black
@@ -89,7 +102,7 @@ if v:version > 703 || v:version == 703 && has('patch541')
   set formatoptions+=j
 endif
 
-highlight ColorColumn ctermbg=magenta
+highlight ColorColumn ctermfg=NONE ctermbg=NONE cterm=inverse
 call matchadd('ColorColumn', '\%81v', 100)
 
 autocmd BufNewFile,BufRead SCons* setf scons
