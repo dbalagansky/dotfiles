@@ -8,6 +8,7 @@ for i in ".bashrc" \
          ".screenrc" \
          ".tmux.conf" \
          ".vimrc" \
+         ".Xresources" \
          ".ctags"
 do
     ln -sv `pwd`/"$i" "${HOME}/$i"
