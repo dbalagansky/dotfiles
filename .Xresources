@@ -44,8 +44,10 @@
      Shift Ctrl <Key>V:insert-selection(CLIPBOARD) \n\
      Shift Ctrl <Key>V:insert-selection(PRIMARY) \n\
 
-*faceName: DejaVu Sans Mono
-*faceSize: 9
+xterm*ScrollBar: false
+!*faceName: DejaVu Sans Mono
+!*faceSize: 9
+*.font: -xos4-terminus-medium-r-*-*-12-*-72-*-*-*-*-u
 *altIsNotMeta: true
 *altSendsEscape: true
 *metaSendsEscape: true
