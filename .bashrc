@@ -79,4 +79,8 @@ ssh() {
     fi
 }
 
+jq() {
+    command python -m json.tool $@
+}
+
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
