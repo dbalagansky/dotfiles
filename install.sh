@@ -23,7 +23,9 @@ ln -sv "`pwd`/init.vim" "${HOME}/.config/nvim/init.vim"
 mkdir -p "${HOME}/.dwm"
 ln -sv "`pwd`/config.h" "${HOME}/.dwm/config.h"
 
-git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+mkdir -p "${HOME}/.vim/"
+ln -sv "`pwd`/.vim/pack" "${HOME}/.vim/pack"
+
 git clone https://github.com/pyenv/pyenv.git ~/.pyenv
 git clone https://github.com/pyenv/pyenv-virtualenvwrapper.git ~/.pyenv/plugins/pyenv-virtualenvwrapper
 
