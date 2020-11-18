@@ -2,7 +2,6 @@ export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export LANGUAGE=en_US.UTF-8
 
-export PATH=${PATH}:/Applications/VirtualBox.app/Contents/MacOS/
 
 shopt -s histappend
 shopt -s checkwinsize
@@ -64,17 +63,6 @@ python() {
     fi
 }
 
-macupdate() {
-    softwareupdate -a -i
-
-    mas upgrade
-
-    brew update
-    brew upgrade
-
-    brew cask upgrade
-}
-
 ssh() {
     if [ "$(ps -p $(ps -p $$ -o ppid=) -o comm=)" = "tmux" ]; then
         tmux rename-window "$(echo $* | awk '{print $NF}')"
@@ -88,5 +76,3 @@ ssh() {
 jq() {
     command python -m json.tool $@
 }
-
-test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
