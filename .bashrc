@@ -42,19 +42,6 @@ else
         #export PS1='\h: \033[34m\w\033[0m \033[1;32m$\033[0m '
 fi
 
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-
-if command -v pyenv 1>/dev/null 2>&1; then
-    eval "$(pyenv init -)"
-fi
-
-export VIRTUALENVWRAPPER_PYTHON=`pyenv which python`
-export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
-if command -v pyenv 1>/dev/null 2>&1; then
-    pyenv virtualenvwrapper
-fi
-
 python() {
     if [ "$#" -eq 0 ]; then
         PYTHONSTARTUP=~/.pythonrc $(type -P python)
