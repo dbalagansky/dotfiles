@@ -21,8 +21,10 @@ ln -sv "`pwd`/.xinitrc" "${HOME}/.xsession"
 mkdir -p "${HOME}/.config/nvim"
 ln -sv "`pwd`/init.vim" "${HOME}/.config/nvim/init.vim"
 
-mkdir -p "${HOME}/.dwm"
-ln -sv "`pwd`/config.h" "${HOME}/.dwm/config.h"
+for i in ".dmenu" ".dwm" ".slock" ".st"
+do
+    ln -sv "`pwd`/$i" "${HOME}/$i"
+done
 
 mkdir -p "${HOME}/.vim/"
 ln -sv "`pwd`/.vim/pack" "${HOME}/.vim/pack"
