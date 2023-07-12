@@ -234,7 +234,7 @@ set number
 " Wrap long lines, while not modifying file contents
 set linebreak
 " What to show in statusline
-set statusline=%<%F%h\ %y\[%{&encoding}\]%m%r%=%c,%l/%L\ %P
+set statusline=%<%F%h\ %m%r%=%c\ %P/%L
 " Always show status line
 set laststatus=2
 " Hide buffers, when they are abandoned
