@@ -1,3 +1,4 @@
 --python-kinds=-iv
+--exclude=.git
 --exclude=build
 --exclude=dist
