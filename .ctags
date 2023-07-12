@@ -1,4 +1,5 @@
 --python-kinds=-iv
 --exclude=.git
+--exclude=*.vim
 --exclude=build
 --exclude=dist
