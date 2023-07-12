@@ -1,5 +1,8 @@
 --python-kinds=-iv
 --exclude=.git
 --exclude=*.vim
+--exclude=.tox
 --exclude=build
 --exclude=dist
+--exclude=venv
+--exclude=.venv
