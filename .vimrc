@@ -114,7 +114,7 @@ call matchadd('ColorColumn', '\%81v', 100)
 autocmd BufNewFile,BufRead SCons* setf scons
 autocmd BufNewFile,BufRead *.sql set filetype=mysql
 autocmd BufNewFile,BufRead *.rb set tabstop=2 shiftwidth=2 textwidth=79 softtabstop=2 expandtab autoindent fileformat=unix
-autocmd BufNewFile,BufRead *.py set tabstop=4 shiftwidth=4 textwidth=79 softtabstop=4 expandtab autoindent fileformat=unix formatprg=yapf\ \|\ isort\ -y\ -
+autocmd BufNewFile,BufRead *.py set tabstop=4 shiftwidth=4 textwidth=88 softtabstop=4 expandtab autoindent fileformat=unix formatprg=yapf\ \|\ isort\ -y\ -
 autocmd BufNewFile,BufRead *.go set tabstop=4 shiftwidth=4 textwidth=79 softtabstop=4 noexpandtab autoindent fileformat=unix list&
 autocmd BufNewFile,BufRead *.c set tabstop=4 shiftwidth=4 textwidth=79 softtabstop=4 noexpandtab autoindent fileformat=unix list&
 autocmd BufNewFile,BufRead *.lua set tabstop=2 shiftwidth=2 textwidth=79 softtabstop=2 expandtab autoindent fileformat=unix
