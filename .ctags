@@ -6,3 +6,9 @@
 --exclude=dist
 --exclude=venv
 --exclude=.venv
+--exclude=node_modules
+--exclude=bower_components
+--PHP-kinds=+cfi-vj
+--exclude=composer.phar
+--exclude=*.js
+--langmap=php:.engine.inc.module.theme.install.php
