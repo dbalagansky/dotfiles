@@ -14,14 +14,20 @@ export HISTTIMEFORMAT="%d/%m/%y %T "
 export HISTSIZE=10000
 export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
 
-if command -v nvim >/dev/null;
+if command -v nvim >/dev/null
 then
     export EDITOR=nvim
     export VISUAL=nvim
     alias vimdiff='nvim -d'
 else
-    export EDITOR=vim
-    export VISUAL=vim
+    if command -v vim >/dev/null
+    then
+        export EDITOR=vim
+        export VISUAL=vim
+    else
+        export EDITOR=vi
+        export VISUAL=vi
+    fi
 fi
 
 vim() {
