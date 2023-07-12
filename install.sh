@@ -14,8 +14,14 @@ do
     ln -sv `pwd`/"$i" "${HOME}/$i"
 done
 
+ln -sv "`pwd`/.profile" "${HOME}/.bash_profile"
+ln -sv "`pwd`/.xinitrc" "${HOME}/.xsession"
+
 mkdir -p "${HOME}/.config/nvim"
 ln -sv "`pwd`/init.vim" "${HOME}/.config/nvim/init.vim"
+
+mkdir -p "${HOME}/.dwm"
+ln -sv "`pwd`/config.h" "${HOME}/.dwm/config.h"
 
 git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 git clone https://github.com/pyenv/pyenv.git ~/.pyenv
