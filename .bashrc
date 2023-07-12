@@ -40,6 +40,17 @@ else
         export PS1='\[\033[01;32m\]\u@\h\[\033[01;34m\] \w \$\[\033[00m\] '
 fi
 
+if [ -d "$HOME/.pyenv" ]
+then
+    export PYENV_ROOT="$HOME/.pyenv"
+    export PATH="$PYENV_ROOT/bin:$PYENV_ROOT/shims:$PATH"
+
+    if command -v pyenv 1>/dev/null 2>&1
+    then
+        eval "$(pyenv init -)"
+    fi
+fi
+
 python() {
     if [ "$#" -eq 0 ]; then
         PYTHONSTARTUP=~/.pythonrc $(type -P python)
