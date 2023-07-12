@@ -71,7 +71,7 @@ highlight IncSearch ctermfg=0 ctermbg=3 cterm=NONE
 highlight Search ctermfg=0 ctermbg=3
 highlight Pmenu ctermfg=7 ctermbg=0
 highlight PmenuSel ctermfg=NONE ctermbg=NONE cterm=inverse
-highlight MatchParen ctermfg=NONE ctermbg=NONE cterm=inverse
+highlight MatchParen ctermfg=8 ctermbg=NONE cterm=inverse
 
 " VIMDIFF COLORS FIX {{{
 highlight DiffAdd term=reverse cterm=bold ctermbg=green ctermfg=black
@@ -79,6 +79,18 @@ highlight DiffChange term=reverse cterm=bold ctermbg=cyan ctermfg=black
 highlight DiffText term=reverse cterm=bold ctermbg=gray ctermfg=black
 highlight DiffDelete term=reverse cterm=bold ctermbg=red ctermfg=black
 " }}}
+
+" Two colour scheme
+highlight Normal cterm=NONE ctermfg=NONE
+highlight Comment cterm=NONE ctermfg=8
+highlight Constant cterm=NONE ctermfg=NONE
+highlight Identifier cterm=NONE ctermfg=NONE
+highlight Function cterm=NONE ctermfg=NONE
+highlight Statement cterm=NONE ctermfg=NONE
+highlight PreProc cterm=NONE ctermfg=NONE
+highlight Type cterm=NONE ctermfg=NONE
+highlight Special cterm=NONE ctermfg=NONE
+highlight Delimiter cterm=NONE ctermfg=NONE
 
 " FOLDING {{{
 set foldmethod=indent
