@@ -8,7 +8,7 @@ shopt -s checkwinsize
 
 stty -ixon
 
-export HISTCONTROL=ignoredups:erasedups
+export HISTCONTROL=ignorespace
 export HISTTIMEFORMAT="%d/%m/%y %T "
 export HISTSIZE=10000
 export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
