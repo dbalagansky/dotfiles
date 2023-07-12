@@ -115,12 +115,12 @@ autocmd BufNewFile,BufRead SCons* setf scons
 autocmd BufNewFile,BufRead *.sql set filetype=mysql
 autocmd BufNewFile,BufRead *.rb set tabstop=2 shiftwidth=2 textwidth=79 softtabstop=2 expandtab autoindent fileformat=unix
 autocmd BufNewFile,BufRead *.py set tabstop=4 shiftwidth=4 textwidth=79 softtabstop=4 expandtab autoindent fileformat=unix formatprg=yapf\ \|\ isort\ -y\ -
-autocmd BufNewFile,BufRead *.yaml set tabstop=2 shiftwidth=2 textwidth=79 softtabstop=2 expandtab autoindent fileformat=unix
 autocmd BufNewFile,BufRead *.go set tabstop=4 shiftwidth=4 textwidth=79 softtabstop=4 noexpandtab autoindent fileformat=unix list&
 autocmd BufNewFile,BufRead *.c set tabstop=4 shiftwidth=4 textwidth=79 softtabstop=4 noexpandtab autoindent fileformat=unix list&
 autocmd BufNewFile,BufRead *.lua set tabstop=2 shiftwidth=2 textwidth=79 softtabstop=2 expandtab autoindent fileformat=unix
 autocmd FileType gitcommit setlocal spell spelllang=en
 autocmd FileType vim setlocal tabstop=2 shiftwidth=2 textwidth=79 softtabstop=2 expandtab autoindent fileformat=unix foldmethod=marker foldmarker=\ {{{,\ }}}
+autocmd FileType yaml setlocal tabstop=2 shiftwidth=2 textwidth=79 softtabstop=2 expandtab autoindent fileformat=unix
 "autocmd BufWritePre *.py 0,$!yapf<CR><C-o>
 "autocmd BufWritePre *.py 0,$!isort -y -<CR><C-o>
 
