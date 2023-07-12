@@ -7,15 +7,16 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "Terminus:pixelsize=12" };
 static const char dmenufont[]       = "Terminus:pixelsize=12";
-// static const char col_gray1[]       = "#222222";
-// static const char col_gray2[]       = "#444444";
-// static const char col_gray3[]       = "#bbbbbb";
-// static const char col_gray4[]       = "#eeeeee";
-// static const char col_cyan[]        = "#005577";
+static const char normbordercolor[] = "#576c7f";
+static const char normbgcolor[]     = "#172634";
+static const char normfgcolor[]     = "#fafafa";
+static const char selbordercolor[]  = "#50da8b";
+static const char selbgcolor[]      = "#50da8b";
+static const char selfgcolor[]      = "#172634";
 static const char *colors[][3]      = {
         /*               fg         bg         border   */
-        [SchemeNorm] = { "#fafafa", "#172634", "#576c7f" },
-        [SchemeSel]  = { "#172634", "#50da8b",  "#50da8b" },
+        [SchemeNorm] = { normfgcolor, normbgcolor, normbordercolor },
+        [SchemeSel]  = { selfgcolor, selbgcolor,  selbordercolor },
 };
 
 /* tagging */
@@ -29,6 +30,7 @@ static const Rule rules[] = {
         /* class      instance    title       tags mask     isfloating   monitor */
         { "Gimp",     NULL,       NULL,       0,            1,           -1 },
         { "Firefox",  NULL,       NULL,       1 << 0,       0,           -1 },
+        { "Telegram",  NULL,       NULL,       1 << 4,       0,           -1 },
 };
 
 /* layout(s) */
@@ -56,7 +58,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", "#172634", "-nf", "#fafafa", "-sb", "#50da8b", "-sf", "#172634", NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, NULL };
 static const char *termcmd[]  = { "uxterm", NULL };
 static const char *slockcmd[]  = { "slock", NULL };
 
