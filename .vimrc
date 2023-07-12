@@ -1,10 +1,6 @@
 set nocompatible
 
-" Vundle
-filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-Plugin 'gmarik/Vundle.vim'
+"Plugin 'gmarik/Vundle.vim'
 
 "Plugin 'w0rp/ale'
 "let g:ale_lint_on_text_changed = 'never'
@@ -41,7 +37,7 @@ Plugin 'gmarik/Vundle.vim'
 "Plugin 'maralla/completor.vim'
 "let g:completor_python_binary = $HOME . '/.virtualenvs/neovim3/bin/python'
 
-Plugin 'ludovicchabant/vim-gutentags'
+"Plugin 'ludovicchabant/vim-gutentags'
 
 "Plugin 'scrooloose/nerdcommenter'
 "Plugin 'scrooloose/nerdtree'
@@ -50,8 +46,6 @@ Plugin 'ludovicchabant/vim-gutentags'
 "Plugin 'chriskempson/base16-vim'
 "Plugin 'kaicataldo/material.vim'
 "Plugin 'jdkanani/vim-material-theme'
-
-call vundle#end()
 
 if has('nvim')
   "set termguicolors
