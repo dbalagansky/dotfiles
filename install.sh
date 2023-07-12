@@ -26,6 +26,3 @@ ln -sv "`pwd`/config.h" "${HOME}/.dwm/config.h"
 
 mkdir -p "${HOME}/.vim/"
 ln -sv "`pwd`/.vim/pack" "${HOME}/.vim/pack"
-
-git clone https://github.com/pyenv/pyenv.git ~/.pyenv
-git clone https://github.com/pyenv/pyenv-virtualenvwrapper.git ~/.pyenv/plugins/pyenv-virtualenvwrapper
