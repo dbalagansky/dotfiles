@@ -51,6 +51,11 @@ then
     fi
 fi
 
+if command -v kubectl 1>/dev/null 2>&1
+then
+    source <(kubectl completion bash)
+fi
+
 python() {
     if [ "$#" -eq 0 ]; then
         PYTHONSTARTUP=~/.pythonrc $(type -P python)
