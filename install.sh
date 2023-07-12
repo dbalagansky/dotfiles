@@ -29,7 +29,3 @@ ln -sv "`pwd`/.vim/pack" "${HOME}/.vim/pack"
 
 git clone https://github.com/pyenv/pyenv.git ~/.pyenv
 git clone https://github.com/pyenv/pyenv-virtualenvwrapper.git ~/.pyenv/plugins/pyenv-virtualenvwrapper
-
-[ ! `which brew` ] && [ `uname -s` = 'Darwin' ] && \
-    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" && \
-    brew bundle
