@@ -59,6 +59,23 @@ python() {
     fi
 }
 
+workon() {
+    if [ -d "$HOME/.virtualenvs/${1:-venv}" ]
+    then
+        source "$HOME/.virtualenvs/${1:-venv}/bin/activate"
+    elif [ -d "${1:-venv}" ]
+    then
+        source "${1:-venv}/bin/activate"
+    else
+        return 1
+    fi
+}
+
+mkvirtualenv() {
+    python3 -m venv "${1:-venv}" && source "${1:-venv}/bin/activate"
+}
+alias mkvenv='mkvirtualenv'
+
 ssh() {
     if [ "$(ps -p $(ps -p $$ -o ppid=) -o comm=)" = "tmux" ]; then
         tmux rename-window "$(echo $* | awk '{print $NF}')"
