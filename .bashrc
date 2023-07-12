@@ -33,13 +33,11 @@ vim() {
     command $EDITOR $@
 }
 
-if [ `id -u` -eq 0 ]
+if [[ ${EUID} == 0 ]]
 then
-        export PS1='[\u@\h \W]\# '
-        #export PS1='\h: \033[34m\w\033[0m \033[1;31m#\033[0m '
+        export PS1='\[\033[01;31m\]\h\[\033[01;34m\] \w \$\[\033[00m\] '
 else
-        export PS1='[\u@\h \W]\$ '
-        #export PS1='\h: \033[34m\w\033[0m \033[1;32m$\033[0m '
+        export PS1='\[\033[01;32m\]\u@\h\[\033[01;34m\] \w \$\[\033[00m\] '
 fi
 
 python() {
