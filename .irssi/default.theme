@@ -1,0 +1,5 @@
+abstracts = {
+  sb_background = "%9%n";
+
+  sb = "%K[%n$*%K]%n";
+};

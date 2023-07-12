@@ -10,7 +10,8 @@ for i in ".bashrc" \
          ".vimrc" \
          ".Xresources" \
          ".ctags" \
-         ".exrc"
+         ".exrc" \
+         ".irssi"
 do
     ln -sv `pwd`/"$i" "${HOME}/$i"
 done

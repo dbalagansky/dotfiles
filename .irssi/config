@@ -1,0 +1,77 @@
+settings = {
+  core = {
+    real_name = "1";
+    user_name = "1";
+    nick = "anskiy";
+    recode = "no";
+    quit_message = " ";
+    recode_fallback = "KOI8-R";
+  };
+  "fe-text" = { actlist_sort = "refnum"; indent_always = "yes"; };
+  "fe-common/core" = {
+    show_nickmode = "yes";
+    autolog = "no";
+    autoclose_windows = "no";
+    show_names_on_join = "no";
+    autolog_path = "~/.irssi/logs/$tag/$0.log";
+  };
+  "irc/core" = {
+    auto_whowas = "no";
+    channel_sync = "no";
+    join_auto_chans_on_invite = "no";
+  };
+};
+chatnets = {
+  Libera = { type = "IRC"; };
+  OFTC = { type = "IRC"; };
+  RusNet = { type = "IRC"; };
+};
+servers = (
+  {
+    address = "irc.libera.chat";
+    chatnet = "Libera";
+    port = "6697";
+    use_ssl = "yes";
+    ssl_verify = "yes";
+    family = "inet";
+    autoconnect = "yes";
+  },
+  {
+    address = "utf.rusnet.org.ru";
+    chatnet = "RusNet";
+    port = "7770";
+    use_ssl = "yes";
+    ssl_verify = "yes";
+    family = "inet";
+  },
+  {
+    address = "irc.oftc.net";
+    chatnet = "OFTC";
+    port = "6697";
+    use_ssl = "yes";
+    ssl_verify = "yes";
+    family = "inet";
+    autoconnect = "yes";
+  }
+);
+channels = (
+  { name = "#gentoo"; chatnet = "Libera"; autojoin = "no"; },
+  { name = "#gentoo-chat"; chatnet = "Libera"; autojoin = "no"; },
+  { name = "#ceph"; chatnet = "OFTC"; autojoin = "yes"; }
+  { name = "#ceph-ansible"; chatnet = "OFTC"; autojoin = "yes"; }
+  { name = "#openstack"; chatnet = "OFTC"; autojoin = "yes"; },
+  { name = "#openstack-ansible"; chatnet = "OFTC"; autojoin = "yes"; }
+  { name = "#openstack-keystone"; chatnet = "OFTC"; autojoin = "no"; }
+  { name = "#openstack-nova"; chatnet = "OFTC"; autojoin = "no"; }
+  { name = "#openstack-sdks"; chatnet = "OFTC"; autojoin = "no"; },
+  { name = "#openstack-telemetry"; chatnet = "OFTC"; autojoin = "no"; }
+);
+keyboard = (
+  { key = "^P"; id = "backward_history"; data = ""; },
+  { key = "^N"; id = "forward_history"; data = ""; },
+  { key = "^F"; id = "forward_character"; data = ""; },
+  { key = "^B"; id = "backward_character"; data = ""; }
+);
+logs = { };
+statusbar = { default = { topic = { disabled = "yes"; }; }; };
+ignores = ( { level = "NO_ACT JOINS PARTS QUITS MODES NICKS"; } );
