@@ -10,7 +10,7 @@ stty -ixon
 
 export HISTCONTROL=ignorespace
 export HISTTIMEFORMAT="%d/%m/%y %T "
-export HISTSIZE=10000
+export HISTSIZE=100000
 export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
 
 if command -v nvim >/dev/null
