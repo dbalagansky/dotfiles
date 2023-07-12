@@ -243,7 +243,7 @@ set hidden
 "set wildmode=""
 " Show completions in statusline
 set wildmenu
-set wildignore+=Session.vim,tags
+set wildignore+=Session.vim,tags,venv,.venv
 
 set mouse=
 
