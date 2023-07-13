@@ -1,0 +1,25 @@
+color hdrdefault black default
+color signature black default
+color normal white default
+
+set sidebar_visible
+set sidebar_format = "%B%?F? [%F]?%* %?N?%N/?%S"
+set mail_check_stats
+
+bind index,pager \CP sidebar-prev
+bind index,pager \CN sidebar-next
+bind index,pager \CO sidebar-open
+
+bind index,pager j next-line
+bind index,pager k previous-line
+bind index,pager \Cu half-up
+bind index,pager \Cd half-down
+
+set sort=reverse-date-received
+
+set index_format="%4C %Z %{!%a, %b %d, %Y %I:%M:%S%p} %-15.15L (%?l?%4l&%4c?) %s"
+
+set mail_check=60
+set imap_check_subscribed
+set imap_keepalive = 300
+unset imap_passive
