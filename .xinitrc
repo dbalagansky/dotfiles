@@ -19,7 +19,7 @@ do
     then
         if [ -e /sys/class/power_supply/BAT0 ]
         then
-            BATTERY="$(expr `cat /sys/class/power_supply/BAT0/charge_now` \* 100 / `cat /sys/class/power_supply/BAT0/charge_full`)%"
+            BATTERY="$(expr `cat /sys/class/power_supply/BAT0/energy_now` \* 100 / `cat /sys/class/power_supply/BAT0/energy_full`)%"
         else
             BATTERY=0
         fi
