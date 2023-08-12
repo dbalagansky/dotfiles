@@ -24,3 +24,6 @@ ln -sv "`pwd`/init.vim" "${HOME}/.config/nvim/init.vim"
 
 mkdir -p "${HOME}/.vim/"
 ln -sv "`pwd`/.vim/pack" "${HOME}/.vim/pack"
+
+mkdir -p "${HOME}/.config/qutebrowser"
+ln -sv "`pwd`/.config/qutebrowser/config.py" "${HOME}/.config/qutebrowser/config.py"
