@@ -5,6 +5,8 @@ TIMER=0
 
 xsetroot -solid '#172634' &
 
+test -f ~/.Xresources && xrdb -merge -I$HOME ~/.Xresources
+
 while true
 do
     if $(mpc | grep -q 'playing')
