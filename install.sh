@@ -18,6 +18,7 @@ done
 
 ln -sv "`pwd`/.profile" "${HOME}/.bash_profile"
 ln -sv "`pwd`/.xinitrc" "${HOME}/.xsession"
+ln -sv "`pwd`/.xinitrc" "${HOME}/.xinitrc"
 
 mkdir -p "${HOME}/.config/nvim"
 ln -sv "`pwd`/init.vim" "${HOME}/.config/nvim/init.vim"
