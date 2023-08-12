@@ -5,8 +5,8 @@ static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "Fixed:style=SemiCondensed:pixelsize=13" };
-static const char dmenufont[]       = "Fixed:style=SemiCondensed:pixelsize=13";
+static const char *fonts[]          = { "Misc Fixed:style=SemiCondensed:pixelsize=13" };
+static const char dmenufont[]       = "Misc Fixed:style=SemiCondensed:pixelsize=13";
 static const char normbordercolor[] = "#576c7f";
 static const char normbgcolor[]     = "#172634";
 static const char normfgcolor[]     = "#fafafa";

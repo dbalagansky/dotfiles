@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Fixed:style=SemiCondensed:pixelsize=13";
+static char *font = "Misc Fixed:style=SemiCondensed:pixelsize=13";
 static int borderpx = 1;
 
 /*

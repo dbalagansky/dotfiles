@@ -47,7 +47,7 @@
 xterm*ScrollBar: false
 !*faceName: DejaVu Sans Mono
 !*faceSize: 9
-*.font: -xos4-terminus-medium-r-*-*-12-*-72-*-*-*-*-u
+*.font: -misc-fixed-medium-r-semicondensed-*-13-*-*-*-*-*-*-*
 *altIsNotMeta: true
 *altSendsEscape: true
 *metaSendsEscape: true
