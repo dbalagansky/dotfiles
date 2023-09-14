@@ -1,5 +1,4 @@
-#!/bin/sh
-# vim:set filetype=sh:
+#!/bin/bash
 
 TIMER=0
 
