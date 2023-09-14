@@ -8,12 +8,6 @@ test -f ~/.Xresources && xrdb -merge -I$HOME ~/.Xresources
 
 while true
 do
-    if $(mpc | grep -q 'playing')
-    then
-        MPCSTATUS="$(mpc | sed -n '1p')"
-    else
-        MPCSTATUS="stopped"
-    fi
     if [ $TIMER -eq 0 ]
     then
         if [ -e /sys/class/power_supply/BAT0 ]
