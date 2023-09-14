@@ -16,7 +16,7 @@ do
         else
             BATTERY=0
         fi
-        OUTTEMP="$(curl -s https://www.timeanddate.com/weather/russia/saint-peterburg | sed -n 's/.*Now.*h2>\(-\?[0-9]\+\)\&nbsp;°C.*/\1/p')°C"
+        OUTTEMP="$(curl 'https://wttr.in/Saint-Petersburg?format=%t')"
         TIMER=600
     else
         TIMER=$(expr $TIMER - 60)
