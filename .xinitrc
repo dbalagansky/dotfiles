@@ -22,7 +22,7 @@ do
         TIMER=$(expr $TIMER - 60)
     fi
 
-    xsetroot -name " mpd: $MPCSTATUS | battery: $BATTERY | outtemp: $OUTTEMP | $(date '+%b %d %a %H:%M')"
+    xsetroot -name " $BATTERY $OUTTEMP $(date '+%b %d %a %H:%M')"
     sleep 60
 done &
 
