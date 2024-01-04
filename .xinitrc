@@ -6,6 +6,10 @@ xsetroot -solid '#172634' &
 
 test -f ~/.Xresources && xrdb -merge -I$HOME ~/.Xresources
 
+if command -v clipmenud 1>/dev/null 2>&1; then
+    clipmenud 1>/dev/null 2>&1 &
+fi
+
 while true
 do
     if [ $TIMER -eq 0 ]

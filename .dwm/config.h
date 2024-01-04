@@ -62,6 +62,7 @@ static const char *termcmd[]  = { "st", NULL };
 static const char *slockcmd[]  = { "slock", NULL };
 static const char *maimcmd[] = { "sh", "-c", "maim -s -k --format png | xclip -selection clipboard -t image/png", NULL };
 static const char *lockcmd[]  = { "cinnamon-screensaver-command", "-l", NULL };
+static const char *clipcmd[]  = { "clipmenu", NULL };
 
 static Key keys[] = {
         /* modifier                     key        function        argument */
@@ -70,6 +71,7 @@ static Key keys[] = {
         { MODKEY,                       XK_s,      spawn,          {.v = slockcmd } },
         { MODKEY,                       XK_c,      spawn,          {.v = maimcmd } },
         { Mod1Mask|ControlMask,         XK_l,      spawn,          {.v = lockcmd } },
+        { MODKEY|ControlMask,           XK_h,      spawn,          {.v = clipcmd } },
         { MODKEY,                       XK_b,      togglebar,      {0} },
         { MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
         { MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
