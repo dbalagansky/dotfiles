@@ -2,7 +2,6 @@ export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export LANGUAGE=en_US.UTF-8
 
-
 shopt -s histappend
 shopt -s checkwinsize
 
@@ -12,33 +11,20 @@ export HISTCONTROL=ignorespace
 export HISTTIMEFORMAT="%d/%m/%y %T "
 export HISTSIZE=100000
 export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
+export PS1='\[\033[01;32m\]\u@\h\[\033[01;34m\] \w \$\[\033[00m\] '
 
-if command -v nvim >/dev/null
+if command -v vim >/dev/null
 then
-    export EDITOR=nvim
-    export VISUAL=nvim
-    alias vimdiff='nvim -d'
+    export EDITOR=vim
+    export VISUAL=vim
 else
-    if command -v vim >/dev/null
-    then
-        export EDITOR=vim
-        export VISUAL=vim
-    else
-        export EDITOR=vi
-        export VISUAL=vi
-    fi
+    export EDITOR=vi
+    export VISUAL=vi
 fi
 
 vim() {
     command $EDITOR $@
 }
-
-if [[ ${EUID} == 0 ]]
-then
-        export PS1='\[\033[01;31m\]\h\[\033[01;34m\] \w \$\[\033[00m\] '
-else
-        export PS1='\[\033[01;32m\]\u@\h\[\033[01;34m\] \w \$\[\033[00m\] '
-fi
 
 if [ -d "$HOME/.pyenv" ]
 then
@@ -80,16 +66,6 @@ mkvirtualenv() {
     python3 -m venv "${1:-venv}" && source "${1:-venv}/bin/activate"
 }
 alias mkvenv='mkvirtualenv'
-
-ssh() {
-    if [ "$(ps -p $(ps -p $$ -o ppid=) -o comm=)" = "tmux" ]; then
-        tmux rename-window "$(echo $* | awk '{print $NF}')"
-        command ssh "$@"
-        tmux set-window-option automatic-rename "on" 1>/dev/null
-    else
-        command ssh "$@"
-    fi
-}
 
 jq() {
     command python -m json.tool $@

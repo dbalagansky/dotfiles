@@ -2,29 +2,22 @@
 
 for i in ".bashrc" \
          ".inputrc" \
-         ".nethackrc" \
          ".profile" \
          ".pythonrc" \
-         ".screenrc" \
          ".tmux.conf" \
          ".vimrc" \
-         ".Xresources" \
          ".ctags" \
-         ".exrc" \
          ".irssi"
 do
-    ln -sv `pwd`/"$i" "${HOME}/$i"
+    ln -sfv `pwd`/"$i" "${HOME}/$i"
 done
 
-ln -sv "`pwd`/.profile" "${HOME}/.bash_profile"
-ln -sv "`pwd`/.xinitrc" "${HOME}/.xsession"
-ln -sv "`pwd`/.xinitrc" "${HOME}/.xinitrc"
-
-mkdir -p "${HOME}/.config/nvim"
-ln -sv "`pwd`/init.vim" "${HOME}/.config/nvim/init.vim"
+ln -sfv "`pwd`/.profile" "${HOME}/.bash_profile"
+ln -sfv "`pwd`/.xinitrc" "${HOME}/.xsession"
+ln -sfv "`pwd`/.xinitrc" "${HOME}/.xinitrc"
 
 mkdir -p "${HOME}/.vim/"
-ln -sv "`pwd`/.vim/pack" "${HOME}/.vim/pack"
+ln -sfv "`pwd`/.vim/pack" "${HOME}/.vim/pack"
 
 mkdir -p "${HOME}/.config/qutebrowser"
-ln -sv "`pwd`/.config/qutebrowser/config.py" "${HOME}/.config/qutebrowser/config.py"
+ln -sfv "`pwd`/.config/qutebrowser/config.py" "${HOME}/.config/qutebrowser/config.py"

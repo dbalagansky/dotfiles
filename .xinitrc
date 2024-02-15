@@ -1,33 +1,21 @@
 #!/bin/bash
 
-TIMER=0
+xsetroot -solid '#c8c3ad' &
 
-xsetroot -solid '#172634' &
-
-test -f ~/.Xresources && xrdb -merge -I$HOME ~/.Xresources
-
-if command -v clipmenud 1>/dev/null 2>&1; then
+if command -v clipmenud 1>/dev/null 2>&1
+then
     clipmenud 1>/dev/null 2>&1 &
 fi
 
 while true
 do
-    if [ $TIMER -eq 0 ]
+    if [ -e /sys/class/power_supply/BAT0 ]
     then
-        if [ -e /sys/class/power_supply/BAT0 ]
-        then
-            BATTERY="$(expr `cat /sys/class/power_supply/BAT0/energy_now` \* 100 / `cat /sys/class/power_supply/BAT0/energy_full`)%"
-        else
-            BATTERY=0
-        fi
-        OUTTEMP="$(curl 'https://wttr.in/Saint-Petersburg?format=%t')"
-        TIMER=600
-    else
-        TIMER=$(expr $TIMER - 60)
+        BATTERY=" $(expr `cat /sys/class/power_supply/BAT0/energy_now` \* 100 / `cat /sys/class/power_supply/BAT0/energy_full`)%"
     fi
 
-    xsetroot -name " $BATTERY $OUTTEMP $(date '+%b %d %a %H:%M')"
-    sleep 60
+    xsetroot -name "$BATTERY"
+    sleep 600
 done &
 
 if [ -x /usr/bin/dwm-start ]

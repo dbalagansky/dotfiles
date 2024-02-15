@@ -1,7 +1,3 @@
-!XTerm*disallowedWindowOps: 20,21,SetXprop
-!*customization: -color
-!*VT100*colorMode: on
-!*VT100*dynamicColors: on
 ! special
 *.foreground:   #fafafa
 *.background:   #172634
@@ -45,8 +41,6 @@
      Shift Ctrl <Key>V:insert-selection(PRIMARY) \n\
 
 xterm*ScrollBar: false
-!*faceName: DejaVu Sans Mono
-!*faceSize: 9
 *.font: -misc-fixed-medium-r-semicondensed-*-13-*-*-*-*-*-*-*
 *altIsNotMeta: true
 *altSendsEscape: true
@@ -56,70 +50,3 @@ xterm*ScrollBar: false
 *cutToBeginningOfLine: false
 *allowWindowOps: true
 *selectToClipboard: true
-
-!URxvt.background: #323232
-!URxvt.foreground: gray
-!URxvt.scrollBar: false
-!URxvt.font: -*-terminus-medium-r-*-*-12-*-*-*-*-*-*-u
-!URxvt*secondaryScroll: true
-!URxvt.meta8: true
-!URxvt.perl-ext-common: default,matcher
-!URxvt.matcher.button: 1
-!URxvt.urlLauncher: firefox
-!URxvt.visualBell: true
-!URxvt.pointerBlank: true
-!URxvt.modifier: modX
-
-!!XTerm*font: -xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso10646-1
-!!colors:
-!!lightred
-!*.color1: #f35f50
-!!lightgreen
-!*.color2: #a9f651
-!!lightyellow
-!*.color3: #f8f897
-!!lightblue
-!*.color4: #84aafd
-!!lightmagenta
-!*.color5: #f265f7
-!!lightcyan
-!*.color6: #a1a1f8
-!!gray
-!!*.color7: #727272
-!!*.color7: #b2b2b2
-!!*.color7: #e3e3e3
-!!lightgray
-!*.color8: #727272
-!!red
-!*.color9: #f33e2c
-!!green
-!*.color10: #8cf614
-!!yellow
-!*.color11: #f8f859
-!!blue
-!*.color12: #44a6fd
-!!magenta
-!*.color13: #f252f7
-!!cyan
-!*.color14: #9595f8
-!!white
-!*.color15: #ffffff
-!!black
-!*.color16: #000000
-
-!*.color1: #f38c82
-!*.color2: #c0f683
-!*.color3: #f8f8c8
-!*.color4: #b7dcfd
-!*.color5: #f496f7
-!*.color6: #d2d2f8
-!*.color7: #e3e3e3
-!*.color8: #727272
-!*.color9: #f35f50
-!*.color10: #a9f651
-!*.color11: #f8f897
-!*.color12: #84aafd
-!*.color13: #f265f7
-!*.color14: #a1a1f8
-!*.color15: #ffffff
-!*.color16: #000000
