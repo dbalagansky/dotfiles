@@ -8,17 +8,17 @@ set bg=dark
 colorscheme default
 
 " COLOUR FIXES BASED OFF NOCTU AND VIM-DIM
-highlight LineNr ctermfg=0 ctermbg=NONE
+highlight LineNr ctermfg=8 ctermbg=NONE
 highlight Visual ctermfg=NONE ctermbg=NONE cterm=inverse
-highlight IncSearch ctermfg=0 ctermbg=3 cterm=NONE
+highlight IncSearch ctermfg=0 ctermbg=3
 highlight Search ctermfg=0 ctermbg=3
 highlight Pmenu ctermfg=7 ctermbg=0
 highlight PmenuSel ctermfg=NONE ctermbg=NONE cterm=inverse
-highlight MatchParen ctermfg=8 ctermbg=NONE cterm=inverse
+highlight MatchParen ctermfg=0 ctermbg=8
 
 " VIMDIFF COLORS FIX {{{
-highlight DiffAdd term=reverse cterm=bold ctermbg=green ctermfg=black
-highlight DiffChange term=reverse cterm=bold ctermbg=cyan ctermfg=black
+highlight DiffAdd term=reverse cterm=bold ctermbg=green ctermfg=NONE
+highlight DiffChange term=reverse cterm=bold ctermbg=cyan ctermfg=NONE
 highlight DiffText term=reverse cterm=bold ctermbg=gray ctermfg=black
 highlight DiffDelete term=reverse cterm=bold ctermbg=red ctermfg=black
 " }}}
