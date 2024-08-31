@@ -7,12 +7,12 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "Misc Fixed:style=SemiCondensed:pixelsize=13" };
 static const char dmenufont[]       = "Misc Fixed:style=SemiCondensed:pixelsize=13";
-static const char normbordercolor[] = "#576c7f";
-static const char normbgcolor[]     = "#172634";
-static const char normfgcolor[]     = "#fafafa";
-static const char selbordercolor[]  = "#50da8b";
-static const char selbgcolor[]      = "#50da8b";
-static const char selfgcolor[]      = "#172634";
+static const char normbordercolor[] = "#5f5b50";
+static const char normbgcolor[]     = "#d6d0b6";
+static const char normfgcolor[]     = "#3d3a32";
+static const char selbordercolor[]  = "#5f5b50";
+static const char selbgcolor[]      = "#5f5b50";
+static const char selfgcolor[]      = "#d6d0b6";
 static const char *colors[][3]      = {
         /*               fg         bg         border   */
         [SchemeNorm] = { normfgcolor, normbgcolor, normbordercolor },

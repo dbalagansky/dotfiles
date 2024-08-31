@@ -1,39 +1,39 @@
 ! special
-*.foreground:   #fafafa
-*.background:   #172634
-*.cursorColor:  #ededed
+*.foreground:   #4e4b42
+*.background:   #cdc8b0
+*.cursorColor:  #4e4b42
 
 ! black
-*.color0:       #576c7f
-*.color8:       #798ea3
+*.color0:       #5f5b50
+*.color8:       #94917f
 
 ! red
-*.color1:       #ee6254
-*.color9:       #fc7b6e
+*.color1:       #cd664d
+*.color9:       #ba9a81
 
 ! green
-*.color2:       #50da8b
-*.color10:      #65f6a2
+*.color2:       #439966
+*.color10:      #6a956a
 
 ! yellow
-*.color3:       #fdb94d
-*.color11:      #fdd840
+*.color3:       #999373
+*.color11:      #a09b7f
 
 ! blue
-*.color4:       #63b1e5
-*.color12:      #62bcf9
+*.color4:       #547da5
+*.color12:      #6b88a5
 
 ! magenta
-*.color5:       #c781e5
-*.color13:      #d49deb
+*.color5:       #a479ae
+*.color13:      #a994af
 
 ! cyan
-*.color6:       #53dec3
-*.color14:      #57edcf
+*.color6:       #21a399
+*.color14:      #63a8a1
 
 ! white
-*.color7:       #b8bbbb
-*.color15:      #dbe0e0
+*.color7:       #d3cfb2
+*.color15:      #dad4bb
 
 *VT100.Translations: #override \n\
      Meta <Key>/:dabbrev-expand() \n\
